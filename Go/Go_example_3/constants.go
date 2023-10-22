@@ -17,8 +17,8 @@ func main() {
 
 	var num int = 2
 
-	var myFloat float32 = 6.2
-	println(myFloat + float32(num))
+	// var myFloat float32 = 6.2
+	// println(myFloat + float32(num))
 
 	var myBool bool = true
 	println(myBool)
@@ -27,6 +27,16 @@ func main() {
 
 	myString := "texto"
 	print(myString)
+
+	// const myConst = "esto es una constante"
+
+	// control de flujo jaja
+
+	if num == 2 {
+		fmt.Print("el valor es 2")
+	} else {
+		fmt.Print("el valor no es 2")
+	}
 
 	// Myvar = 2 error
 }
