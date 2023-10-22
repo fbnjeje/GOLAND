@@ -2,6 +2,7 @@ package main
 
 import (
 	"fmt"
+	"reflect"
 )
 
 func main() {
@@ -11,6 +12,10 @@ func main() {
 
 	Myvar = "Esto se modifica Gente"
 	fmt.Println(Myvar)
+
+	fmt.Println(reflect.TypeOf(Myvar))
+
+	// Myvar = 2 error
 }
 
 //esto es un comentario JAJAJAJAJ
