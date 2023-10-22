@@ -15,7 +15,7 @@ func main() {
 
 	fmt.Println(reflect.TypeOf(Myvar))
 
-	var num int = 2
+	var num int = 5
 
 	// var myFloat float32 = 6.2
 	// println(myFloat + float32(num))
@@ -32,8 +32,13 @@ func main() {
 
 	// control de flujo jaja
 
-	if num == 2 {
+	num = 2
+	myString = "hola"
+
+	if num == 2 && myString == "hola" {
 		fmt.Print("el valor es 2")
+	} else if num == 5 {
+		fmt.Print("el valor es 5")
 	} else {
 		fmt.Print("el valor no es 2")
 	}
