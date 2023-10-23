@@ -43,7 +43,29 @@ func main() {
 				}
 			}
 		case 2:
+			fmt.Print("Nombre de la tarea: ")
+			scanner.Scan()
+			name := scanner.Text()
+
+			fmt.Println("ingrese descripcion: ")
+			scanner.Scan()
+			description := scanner.Text()
+
+			lastId++
+
+			tasks[lastId] = task{name: name, description: description, completed: false}
+			fmt.Printf("su tarea %d ha sido agregada", lastId)
 		case 3:
+			fmt.Println("ingrese el id de la tarea completada")
+			scanner.Scan()
+			id, _ := str.Atoi(scanner.Text())
+
+			if tasks[id] {
+
+			} else {
+				fmt.Println("no existe")
+			}
+
 		case 4:
 		case 5:
 			fmt.Print("Saliendo ...")
