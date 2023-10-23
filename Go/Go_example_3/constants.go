@@ -50,6 +50,12 @@ func main() {
 
 	fmt.Println(myArray)
 
+	myMap := make(map[string]int)
+
+	myMap["fbn"] = 20
+	myMap["meliUwu"] = 19
+	myMap["elBrashiten"] = 22
+
 	// Myvar = 2 error
 }
 
