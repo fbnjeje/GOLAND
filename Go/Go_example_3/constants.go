@@ -1,6 +1,7 @@
 package main
 
 import (
+	"container/list"
 	"fmt"
 )
 
@@ -55,8 +56,19 @@ func main() {
 	myMap["fbn"] = 20
 	myMap["meliUwu"] = 19
 	myMap["elBrashiten"] = 22
+	fmt.Println(myMap)
+
+	myMap2 := map[string]int{"fbn": 20, "meliUwu": 19, "elBrashiten": 22}
+	fmt.Println(myMap2)
 
 	// Myvar = 2 error
+	myList := list.New()
+
+	myList.PushBack(1)
+	myList.PushBack(2)
+	myList.PushBack(3)
+
+	fmt.Println(myList.Back().Value)
 }
 
 //esto es un comentario JAJAJAJAJ
