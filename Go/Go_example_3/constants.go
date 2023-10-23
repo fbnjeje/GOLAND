@@ -69,6 +69,10 @@ func main() {
 	myList.PushBack(3)
 
 	fmt.Println(myList.Back().Value)
+
+	for i := 0; i < len(myArray); i++ {
+		println(myArray[i])
+	}
 }
 
 //esto es un comentario JAJAJAJAJ
