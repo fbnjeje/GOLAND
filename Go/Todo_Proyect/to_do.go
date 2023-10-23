@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"fmt"
 	"os"
+	"strconv"
 )
 
 type task struct {
@@ -26,8 +27,27 @@ func main() {
 		fmt.Println("4. Eliminar tarea")
 		fmt.Println("5. Salir")
 
-		fmt.Print("opcion: ")
+		fmt.Print("Opcion: ")
+
 		scanner := bufio.NewScanner(os.Stdin)
 		scanner.Scan()
+		choice, _ := strconv.Atoi(scanner.Text())
+
+		switch choice {
+		case 1:
+			if len(tasks) == 0 {
+				fmt.Println("no hay nada xd")
+			} else {
+				for id, task := range tasks {
+					fmt.Printf("%d. %s. %s (Completdado: %t)\n", id, task.name, task.description, task.completed)
+				}
+			}
+		case 2:
+		case 3:
+		case 4:
+		case 5:
+			fmt.Print("Saliendo ...")
+			os.Exit(0)
+		}
 	}
 }
