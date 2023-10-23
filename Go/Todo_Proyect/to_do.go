@@ -58,11 +58,11 @@ func main() {
 		case 3:
 			fmt.Println("ingrese el id de la tarea completada")
 			scanner.Scan()
-			id, _ := str.Atoi(scanner.Text())
+			id, _ := strconv.Atoi(scanner.Text())
 
 			if task, ok := tasks[id]; ok {
 				task.completed = true
-				task[id] = task
+				tasks[id] = task
 
 				fmt.Print("tarea  completada")
 			} else {
@@ -70,6 +70,18 @@ func main() {
 			}
 
 		case 4:
+
+			fmt.Println("ingrese el id de la tarea completada")
+			scanner.Scan()
+			id, _ := strconv.Atoi(scanner.Text())
+
+			if _, ok := tasks[id]; ok {
+				delete(tasks, id)
+				fmt.Printf("tarea con id %d ha sido eliminada", id)
+			} else {
+				fmt.Println("no existe")
+			}
+
 		case 5:
 			fmt.Print("Saliendo ...")
 			os.Exit(0)
