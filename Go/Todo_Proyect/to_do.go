@@ -60,8 +60,11 @@ func main() {
 			scanner.Scan()
 			id, _ := str.Atoi(scanner.Text())
 
-			if tasks[id] {
+			if task, ok := tasks[id]; ok {
+				task.completed = true
+				task[id] = task
 
+				fmt.Print("tarea  completada")
 			} else {
 				fmt.Println("no existe")
 			}
